@@ -10,7 +10,7 @@ const SearchCard = () => {
 		axios({
 			url: "https://api.magicthegathering.io/v1/cards",
 			params: {
-                pageSize: 50,
+                pageSize: 5,
                 random: true,
 			}
 		}).then((allMagicCards) => {

@@ -34,7 +34,7 @@ const CardInfo = () => {
                 <p>Power: {power}</p>
                 <p>Toughness: {toughness}</p>
                 <Link to='/searchcards' className="searchCards-button">
-                    Back to Searched Cards
+                    Re-Roll Cards
                 </Link>
             </div>
             <div className="cardDisplay">

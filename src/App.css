@@ -123,6 +123,10 @@ header hr {
   align-items: center;
 }
 
+.cardInfoContainer {
+  max-width: 350px;
+}
+
 .cardDisplay img {
   max-width: 100%;
   height: 325px;
@@ -132,7 +136,7 @@ header hr {
 
 .cardDisplay img:hover,
 .cardDisplay img:focus {
-  scale: 1.75;
+  scale: 1.5;
 }
 
 .catalogue a img:hover,
