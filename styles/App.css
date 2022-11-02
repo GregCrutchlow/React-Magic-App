@@ -1,0 +1,26 @@
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: greenyellow;
+  font-family: "Helvetica";
+  font-size: 40px;
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
