@@ -7,7 +7,6 @@ const CardInfo = () => {
     const [cardData, setCardData] = useState({})
     const params = useParams()
     const urlParamsValue = (params.id)
-    console.log(urlParamsValue)
 
     useEffect(() => {
 		axios({
@@ -17,7 +16,7 @@ const CardInfo = () => {
 			setCardData(allMagicCards.data.card)
 			console.log(allMagicCards.data.card)
 		})
-	}, [])
+	},[])
 
     const { name, imageUrl, manaCost, colors, type, rarity, setName, text, power, toughness, flavor } = cardData
 
