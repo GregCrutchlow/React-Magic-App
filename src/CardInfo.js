@@ -16,7 +16,7 @@ const CardInfo = () => {
 			setCardData(allMagicCards.data.card)
 			console.log(allMagicCards.data.card)
 		})
-	},[])
+	},[urlParamsValue])
 
     const { name, imageUrl, manaCost, colors, type, rarity, setName, text, power, toughness, flavor } = cardData
 
