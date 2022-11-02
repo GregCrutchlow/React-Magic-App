@@ -10,14 +10,17 @@ const SearchCard = () => {
 		axios({
 			url: "https://api.magicthegathering.io/v1/cards",
 			params: {
-                pageSize: 5,
+                pageSize: 30,
                 random: true,
 			}
 		}).then((allMagicCards) => {
-			setMagicCards(allMagicCards.data.cards)
+			const filteredMagicCards = allMagicCards.data.cards.filter((card) => {
+				return card.imageUrl !== undefined
+			}).slice( 0, 15 )
+			setMagicCards(filteredMagicCards)
 		})
 	}, [])
-
+	// 
 	return (
 		<ul className="catalogue">
 			{magicCards.map((cardsObj) => {

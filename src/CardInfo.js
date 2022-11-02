@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
+import colourWheel from "./assets/MM20161114_Wheel.png"
 
 const CardInfo = () => {
 
@@ -14,7 +15,7 @@ const CardInfo = () => {
 			
 		}).then((allMagicCards) => {
 			setCardData(allMagicCards.data.card)
-			console.log(allMagicCards.data.card)
+			// console.log(allMagicCards.data.card
 		})
 	},[urlParamsValue])
 
@@ -22,7 +23,10 @@ const CardInfo = () => {
 
     return (
         <div className="cardContainer">
-            <div className="cardInfoContainer">
+            {
+                imageUrl !== undefined ? (
+                <>
+                <div className="cardInfoContainer">
                 <h2>{name}</h2>
                 <p>Type: {type}</p>
                 <p>CMC: {manaCost}</p>
@@ -39,7 +43,13 @@ const CardInfo = () => {
             </div>
             <div className="cardDisplay">
                 <img src={imageUrl} alt={name} />
-            </div>
+                        </div>
+                    </>
+                ) : <div className="loadingPentagon">
+                        <img src={colourWheel} alt="Magic the Gathering Colour Wheel" />
+                </div>
+            }
+            
         </div>
     )
 }

@@ -3,7 +3,7 @@ import SearchCards from './SearchCards';
 import Enter from './Enter';
 import CardInfo from './CardInfo';
 import { Link, Routes, Route } from 'react-router-dom'
-import logo from "./mtg-logo.png"
+import logo from "./assets/mtg-logo.png"
 
 function App() {
   return (
