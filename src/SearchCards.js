@@ -6,6 +6,7 @@ const SearchCard = () => {
 
 	const [magicCards, setMagicCards] = useState([])
 
+
 	useEffect(() => {
 		axios({
 			url: "https://api.magicthegathering.io/v1/cards",
