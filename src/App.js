@@ -11,10 +11,9 @@ function App() {
 			<header>
 				<Link to="/">
           <img src={logo} alt="magic the gathering logo" />
-			  </Link>
-			  <Link to="/searchcards">
           <h1>Card Finder</h1>
 			  </Link>
+			  {/* adding comment to have something to push */}
 			</header>
 			<Routes>
 				<Route path="/" element={<Enter />} />
