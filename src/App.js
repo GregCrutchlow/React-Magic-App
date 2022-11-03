@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchCards from './SearchCards';
+import Enter from './Enter';
+import CardInfo from './CardInfo';
+import { Link, Routes, Route } from 'react-router-dom'
+import logo from "./assets/mtg-logo.png"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		<div className="wrapper">
+			<header>
+				<Link to="/">
+          <img src={logo} alt="magic the gathering logo" />
+          <h1>Card Finder</h1>
+				</Link>
+			</header>
+			<Routes>
+				<Route path="/" element={<Enter />} />
+				<Route path="/searchcards" element={<SearchCards />} />
+				<Route path="/cards/:id" element={<CardInfo />} />
+			</Routes>
+		</div>
+  )
 }
 
 export default App;
