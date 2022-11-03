@@ -28,15 +28,14 @@ const CardInfo = () => {
                 <>
                 <div className="cardInfoContainer">
                 <h2>{name}</h2>
-                <p>Type: {type}</p>
-                <p>CMC: {manaCost}</p>
-                <p>Colours: {colors}</p>
-                <p>Rarity: {rarity}</p>
-                <p>Set: {setName}</p>
-                <p>Rules text: {text}</p>
-                <p>Flavor text: {flavor}</p>
-                <p>Power: {power}</p>
-                <p>Toughness: {toughness}</p>
+                <p><span>Type:</span> {type}</p>
+                <p><span>CMC:</span> {manaCost}</p>
+                <p><span>Colours:</span> {colors}</p>
+                <p><span>Rarity:</span> {rarity}</p>
+                <p><span>Set:</span> {setName}</p>
+                <p><span>Rules text:</span> {text}</p>
+                <p><span>Flavor text:</span> <em>{flavor}</em></p>
+                <p><span>Power/Toughness:</span> {power}/{toughness}</p>
                 <Link to='/searchcards' className="searchCards-button">
                     Re-Roll Cards
                 </Link>

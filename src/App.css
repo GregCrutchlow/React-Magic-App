@@ -1,44 +1,13 @@
-.App {
-  text-align: center;
+body {
+  background: #f1f1f1;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position-y: bottom;
+  background-position-x: right;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: white;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .wrapper {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -78,7 +47,7 @@ header a {
 
 header hr {
   border: 1px solid black;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 40px;
 }
 
@@ -96,13 +65,20 @@ header hr {
 }
 
 .enterButton {
-  font-size: 50px;
-  padding: 8px 15px;
+  font-size: 35px;
+  display: inline-block;
+  padding: 4px 20px;
   margin-top: 7px;
   background: crimson;
   color: white;
   border: solid 2px crimson;
+  border-radius: 4px;
   display: inline-block;
+}
+
+.enterButton:hover {
+  scale: 1.05;
+  box-shadow: 3px 3px 5px 3px #313131;
 }
 
 .catalogue {
@@ -111,12 +87,27 @@ header hr {
   justify-content: center;
 }
 
+.catalogue a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .catalogue a img {
   max-width: 100%;
   height: 300px;
   margin: 10px;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
+}
+
+.catalogue a p {
+  text-align: center;
+  background: crimson;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  max-width: 100%;
 }
 
 .cardContainer {
@@ -132,13 +123,14 @@ header hr {
 .cardDisplay img {
   max-width: 100%;
   height: 325px;
-  padding: 25px;
+  border-radius: 10px;
   transition: 0.3s ease-in-out;
 }
 
 .cardDisplay img:hover,
 .cardDisplay img:focus {
   scale: 1.25;
+  box-shadow: 3px 3px 5px 3px #313131;
 }
 
 .catalogue a img:hover,
@@ -167,22 +159,27 @@ header hr {
   margin: 5px 0;
 }
 
+.cardInfoContainer span {
+  font-weight: bold;
+}
+
+.powerToughness {
+  display: flex;
+}
+
 .loadingPentagon {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   width: 50%;
   height: auto;
   animation-name: spin;
-  animation-duration: 30s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
-  /* width: 220px;
-  height: 220px;
-  background-image: ;
-  clip-path: polygon(
-    50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%
-  ) */
 }
+
+
 
 @keyframes spin {
   0% {rotate: 0deg;}

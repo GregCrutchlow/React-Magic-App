@@ -10,13 +10,13 @@ const SearchCard = () => {
 		axios({
 			url: "https://api.magicthegathering.io/v1/cards",
 			params: {
-                pageSize: 30,
+                pageSize: 10,
                 random: true,
 			}
 		}).then((allMagicCards) => {
 			const filteredMagicCards = allMagicCards.data.cards.filter((card) => {
 				return card.imageUrl !== undefined
-			}).slice( 0, 15 )
+			}).slice( 0, 5 )
 			setMagicCards(filteredMagicCards)
 		})
 	}, [])
@@ -28,6 +28,7 @@ const SearchCard = () => {
 					<li key={cardsObj.id}>
 						<Link to={`/cards/${cardsObj.id}`}>
 							<img src={cardsObj.imageUrl} alt={cardsObj.name} />
+							<p>{cardsObj.name}</p>
 						</Link>
 					</li>
 				)

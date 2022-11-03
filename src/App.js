@@ -12,7 +12,6 @@ function App() {
 				<Link to="/">
           <img src={logo} alt="magic the gathering logo" />
           <h1>Card Finder</h1>
-          <hr />
 				</Link>
 			</header>
 			<Routes>
